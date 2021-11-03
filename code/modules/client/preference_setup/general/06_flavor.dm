@@ -51,7 +51,11 @@
 		switch(href_list["flavor_text"])
 			if("open")
 			if("general")
+<<<<<<< HEAD
 				var/msg = sanitize(input(usr,"Give a general description of your character. This will be shown regardless of clothing, and may NOT include OOC notes and preferences.","Flavor Text",html_decode(pref.flavor_texts[href_list["flavor_text"]])), extra = 0)
+=======
+				var/msg = sanitize(input_cp1251(usr,"Give a general description of your character. This will be shown regardless of clothing, and may include OOC notes and preferences.","Flavor Text",rhtml_decode(pref.flavor_texts[href_list["flavor_text"]])), extra = 0)
+>>>>>>> parent of b1100a854d (tweak(flavor): change description of flavor change window)
 				if(CanUseTopic(user))
 					pref.flavor_texts[href_list["flavor_text"]] = msg
 			else
